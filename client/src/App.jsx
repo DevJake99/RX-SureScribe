@@ -4,8 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import PhysicianDashboard from './components/phycisianDashboard'
-import PhysicianProfile from './components/physicianProfile'
+import PhysicianDashboard from './components/phycisianDashboard/PhysicianDashboard'
+import PhysicianProfile from './components/physicianProfile/PhysicianProfile'
+import PharmacistProfile from './components/pharmacistProfile/PharmacistProfile'
 
 
 function App() {
