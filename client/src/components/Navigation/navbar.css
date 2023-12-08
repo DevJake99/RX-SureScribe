@@ -1,0 +1,7 @@
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* navbar.css */
+.navbar-custom {
+    background-color: var(--bs-info); /* Change this to the color you want */
+  }
+  
