@@ -1,8 +1,12 @@
 import './layout.css'
+import NavBar from '../Navigation/NavBar'
+import { Outlet } from 'react-router-dom';
 
 function Layout() {
     return <>
-        <h1>Layout</h1>
+        <NavBar></NavBar>
+
+        <Outlet></Outlet>
 
     </>
 }

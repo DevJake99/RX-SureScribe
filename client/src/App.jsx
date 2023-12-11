@@ -7,14 +7,15 @@ import Layout from './components/Layout/Layout'
 import PhysicianDashboard from './components/phycisianDashboard/PhysicianDashboard'
 import PhysicianProfile from './components/physicianProfile/PhysicianProfile'
 import PharmacistProfile from './components/pharmacistProfile/PharmacistProfile'
+import Login from './components/login/Login'
 
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/logoin' element={<Login />} />
         <Route path="/" element={<Layout></Layout>}>
+          <Route path='/login' element={<Login />} />
           <Route path='/physician' element={<PhysicianDashboard />} />
           <Route path='/pharmacist' element={<PharmacistProfile />} />
         </Route>

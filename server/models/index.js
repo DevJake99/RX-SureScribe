@@ -1,6 +1,7 @@
 const Patient = require('./Patient');
-const Pharmacist = require('./pharmacist');
-const Physician = require('./physician');
+const User = require('./user');
+const Prescription = require('./prescription');
 
 
-module.exports { Patient, Pharmacist, Physician }
+
+module.exports = { Patient, User, Prescription };
