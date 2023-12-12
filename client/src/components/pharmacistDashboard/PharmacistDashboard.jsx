@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './pharmacistDash.css';
-import SearchIcon from '/Users/pavang/Desktop/RX-SureScribe/client/src/assets/search.svg';
+// import SearchIcon from '/Users/pavang/Desktop/RX-SureScribe/client/src/assets/search.svg';
 
 
 function PharmDash() {
@@ -27,7 +27,8 @@ function PharmDash() {
             value={searchName}
             onChange={(e) => setSearchName(e.target.value)}
           />
-          {"\t"}{"\t"}{"\t"}<img src={SearchIcon} alt="Search" onClick={() => searchPatient(searchName)} />
+          {/* <img src={SearchIcon} alt="Search" onClick={() => searchPatient(searchName)} style={{marginLeft:"12px"}} /> */}
+          
         </div>
       </>
     );
