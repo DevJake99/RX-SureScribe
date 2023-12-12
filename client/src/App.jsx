@@ -16,13 +16,11 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout>
+        <Route path="/" element={<Layout></Layout>}>
           <Route path='/navbar' element={<NavBar />} />
           <Route path='/login' element={<Login />} />
           <Route path='/physician' element={<PhysicianDashboard />} />
           <Route path='/pharmacist' element={<PharmacistProfile />} />
-        </Layout>}>
-        </Route>
       </Routes>
 
     </>
