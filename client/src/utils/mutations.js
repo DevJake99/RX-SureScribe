@@ -8,14 +8,6 @@ export const LOGIN_USER = gql`
         _id
         userType
         firstName
-        lastName
-        patients{
-            firstName
-            lastName
-            dob
-            allergies
-            prescriptions
-        }
       }
     }
   }

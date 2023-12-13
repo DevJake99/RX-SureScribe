@@ -15,6 +15,8 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
+import Landing from './components/Landing/Landing'
 import OrderContext from './components/phycisianDashboard/OrderContext';
 
 // Construct our main GraphQL API endpoint
@@ -48,10 +50,11 @@ function App() {
     <OrderContext.Provider value={{ orders, setOrders }}>
       <ApolloProvider client={client}>
         <Routes>
-          <Route path='/register' element={<Register></Register>}></Route>
+          <Route path='/login' element={<Login />} />
+
           <Route path="/" element={<Layout></Layout>}>
-            <Route path='/navbar' element={<NavBar />} />
-            <Route path='/login' element={<Login />} />
+            <Route index element={<Landing></Landing>}></Route>
+            <Route path='/register' element={<Register></Register>}></Route>
             <Route path='/physician' element={<PhysicianDashboard />} />
             <Route path='/pharmacist' element={<PharmacistDashboard />} />
           </Route>

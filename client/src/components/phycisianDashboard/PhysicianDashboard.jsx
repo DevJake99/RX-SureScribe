@@ -55,7 +55,7 @@ function PhysDash() {
 
   return (
     <div>
-      <h1>Welcome, Doctor!</h1>
+      <h1>Welcome, Physician!</h1>
       <Button variant="outline-primary" onClick={()=>setShowModal(true)} >Create New Patient</Button>
       <Modal show={showModal} onHide={()=>setShowModal(false)}>
           <CreatePatient closeModal={()=>setShowModal(false)} clifford={"The Big Red Dog"} tacos={[1,2,3]}/>

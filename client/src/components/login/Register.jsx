@@ -92,22 +92,6 @@ const Register = () => {
             <p>Congratulations! You have created an account!</p>
           ) : (
             <Form onSubmit={handleFormSubmit}>
-              {/*
-             <Form.Group controlId='formUserType'>
-               <Form.Label>User Type</Form.Label>
-               <input
-                 required
-                 className='form-control'
-                 value={user.userType}
-                 name='userType'
-                 type='text'
-                 placeholder='User Type'
-                 onChange={handleInputChange} />
-             </Form.Group>
-             <br />
-             
-             
-            */}
               <Form.Group controlId='formUserType'>
                 <Form.Label>User Type</Form.Label>
                 <select
