@@ -17,6 +17,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import OrderContext from './components/phycisianDashboard/OrderContext';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -42,11 +43,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
-
 function App() {
+  const [orders, setOrders] = useState([]);
+
   return (
-    <>
+    <OrderContext.Provider value={{ orders, setOrders }}>
       <ApolloProvider client={client}>
         <Routes>
           <Route path='/register' element={<Register></Register>}></Route>
@@ -58,8 +59,7 @@ function App() {
           </Route>
         </Routes>
       </ApolloProvider>
-
-    </>
+    </OrderContext.Provider>
   )
 }
 export default App
