@@ -5,7 +5,8 @@ import Register from './Register';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-
+import { Navbar } from 'react-bootstrap';
+import Footer from '../Footer/Footer';
 const Login = () => {
   const [user, setUser] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -56,9 +57,16 @@ const Login = () => {
 
   return (
     <>
+          <Navbar className="navbar-custom" collapseOnSelect expand="lg">
+        <Container fluid className='px-4'>
+          <Navbar.Brand >RX-SureScribe</Navbar.Brand>
+          <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <Container>
         <Row>
-          <Col md={6} style={{ marginTop: 300 + 'px' }}>
+        <Col md={6} style={{ marginTop: '300px' }}>
             <div className='card'>
               <div className='card-body'>
                 {data ? (
@@ -104,6 +112,7 @@ const Login = () => {
 
           </Col>
         </Row>
+        <Footer />
       </Container>
 
     </>

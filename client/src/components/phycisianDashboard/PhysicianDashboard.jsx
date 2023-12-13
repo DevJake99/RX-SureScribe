@@ -1,6 +1,6 @@
 import './phycisianDash.css'
 import { Button, Modal } from 'react-bootstrap';
-import { Card } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
 import CreatePatient from './createPatient';
 import { useState } from 'react';
 import PatientCard from './patientCard';
@@ -11,6 +11,7 @@ function PhysDash() {
   const[showPatientDetails, setShowPatientDetails] = useState(false);
   const[currentPatient, setCurrentPatient] = useState({})
   const [showPrescriptionModal, setShowPrescriptionModal] = useState(false);
+  // const [name, license, deaNumber] = useState({}) 
 
   let dummyData = [
     {
@@ -56,10 +57,17 @@ function PhysDash() {
   return (
     <div>
       <h1>Welcome, Physician!</h1>
-      <Button variant="outline-primary" onClick={()=>setShowModal(true)} >Create New Patient</Button>
+      <Button className="create-patient-button" variant="outline-primary" onClick={() => setShowModal(true)}>Create New Patient</Button>
       <Modal show={showModal} onHide={()=>setShowModal(false)}>
           <CreatePatient closeModal={()=>setShowModal(false)} clifford={"The Big Red Dog"} tacos={[1,2,3]}/>
       </Modal>
+      
+      {/* <div className="physicianProfile">
+            <h1>{name}</h1>
+            <p>License: {license}</p>
+            <p>DEA#: {deaNumber}</p>
+        </div>
+         */}
       <div className="patientCardContainer">
         {dummyData.map((patient, index) => (
           <PatientCard currentPatient = {currentPatient} setCurrentPatient = {setCurrentPatient} showPatientDetails= {showPatientDetails} setShowPatientDetails = {setShowPatientDetails} patient={patient} key={index} handlePatientClick={() => console.log("clicked")}/>

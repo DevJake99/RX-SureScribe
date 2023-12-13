@@ -159,7 +159,7 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Zip</Form.Label>
+                            <Form.Label>Zipcode</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter Zip"
