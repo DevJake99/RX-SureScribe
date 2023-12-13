@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 
-export default function PrescribeRx (props) {
+export default function PrescribeRx(props) {
     const [prescriptionInfo, setPrescriptionInfo] = useState({
         medication: "",
         dosage: "",
@@ -13,7 +13,7 @@ export default function PrescribeRx (props) {
 
     useEffect(() => {
         console.log(prescriptionInfo)
-    })  
+    })
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -44,26 +44,26 @@ export default function PrescribeRx (props) {
 
 
 
-const handleModalOpen = () => {
-    setShowModal(true);
-}
+    const handleModalOpen = () => {
+        setShowModal(true);
+    }
 
-const handleModalClose = () => {
-    setShowModal(false);
-    setPrescriptionInfo({
-        medication: "",
-        dosage: "",
-        frequency: "",
-        duration: "",
-        refills: "",
-        notes: "",
-    });
-};
+    const handleModalClose = () => {
+        setShowModal(false);
+        setPrescriptionInfo({
+            medication: "",
+            dosage: "",
+            frequency: "",
+            duration: "",
+            refills: "",
+            notes: "",
+        });
+    };
 
-return (
-    <div
+    return (
+        <div
             className="modal show"
-            style={{ display: 'block', position: 'initial',}}
+            style={{ display: 'block', position: 'initial', }}
         >
             <Modal.Dialog>
                 <Modal.Header closeButton>
@@ -82,59 +82,59 @@ return (
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
-                        </Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Dosage</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter Medication Dosing"
-                                name="Dosage"
-                                value={prescriptionInfo.dosage}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Frequency</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter Frequency"
-                                name="Frequency"
-                                value={prescriptionInfo.frequency}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Duration</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter Duration"
-                                name="Duration"
-                                value={prescriptionInfo.duration}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Refills</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter Refills"
-                                name="Refills"
-                                value={prescriptionInfo.refills}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>notes</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter Notes"
-                                name="Notes"
-                                value={prescriptionInfo.notes}
-                                onChange={handleInputChange}
-                            />
-                        </Form.Group>
-                        </Modal.Body>
-                        <Modal.Footer>
+                    </Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Dosage</Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="Enter Medication Dosing"
+                            name="Dosage"
+                            value={prescriptionInfo.dosage}
+                            onChange={handleInputChange}
+                        />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Frequency</Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="Enter Frequency"
+                            name="Frequency"
+                            value={prescriptionInfo.frequency}
+                            onChange={handleInputChange}
+                        />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Duration</Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="Enter Duration"
+                            name="Duration"
+                            value={prescriptionInfo.duration}
+                            onChange={handleInputChange}
+                        />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Refills</Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="Enter Refills"
+                            name="Refills"
+                            value={prescriptionInfo.refills}
+                            onChange={handleInputChange}
+                        />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>notes</Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="Enter Notes"
+                            name="Notes"
+                            value={prescriptionInfo.notes}
+                            onChange={handleInputChange}
+                        />
+                    </Form.Group>
+                </Modal.Body>
+                <Modal.Footer>
                     <Button variant="secondary" onClick={handleModalClose}>Close</Button>
                     <Button variant="primary">Save changes</Button>
                 </Modal.Footer>

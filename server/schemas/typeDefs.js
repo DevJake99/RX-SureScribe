@@ -69,14 +69,11 @@ type Mutation {
         prescriptions:[String],
         ) : Patient
     # addPrescription(prescription:[String]) : Patient
-    # addAllergies(allergies:[String]) : Patient
 
-    login
-    (email: String!,
+    login(
+    email: String!,
     password: String!
     ): Auth
-    # docLogin(email: String!, password: String!): Auth
-    # pharmLogin(email:String!, password: String!): Auth
 }
 `
 

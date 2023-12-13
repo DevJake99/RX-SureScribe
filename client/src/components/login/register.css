@@ -1,0 +1,30 @@
+h1{
+    position:relative;
+    left: 30%;
+}
+
+.page{
+    position:relative;
+    top: 130px;
+    left: 35%;
+
+}
+
+.registerBtn {
+    display: inline-block;
+    position:relative;
+    left: 55px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.registerBtn:hover {
+    background-color: #0056b3;
+
+}
