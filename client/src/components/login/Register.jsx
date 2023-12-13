@@ -71,22 +71,15 @@ const Register = () => {
 
   return (
     <>
-      <h1>Welcome to SurScribe!</h1>
-      <div className='page'>
-        <h2>Have an account? </h2>
-        <a className='registerBtn'>Login Here</a>
-        <br></br>
-        <h2>Need to Register?</h2>
-        <a className='registerBtn' onClick={handleModalOpen}>
-          Register here
-        </a>
-      </div>
-      <Modal show={showModal} onHide={handleModalClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Sign up</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {data ? (
+      <a onClick={handleModalOpen}>
+      Register Here
+    </a>
+    <Modal show={showModal} onHide={handleModalClose}>
+      <Modal.Header closeButton>
+        <Modal.Title>Sign up</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {data ? (
             <p>Congratulations! You have created an account!</p>
           ) : (
             <Form onSubmit={handleFormSubmit}>

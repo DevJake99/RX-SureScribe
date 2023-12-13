@@ -4,8 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import PhysicianDashboard from './components/phycisianDashboard/PhysicianDashboard'
-import PhysicianProfile from './components/physicianProfile/PhysicianProfile'
-import PharmacistProfile from './components/pharmacistProfile/PharmacistProfile'
+// import PhysicianProfile from './components/physicianProfile/PhysicianProfile'
+// import PharmacistProfile from './components/pharmacistProfile/PharmacistProfile'
+import PharmacistDashboard from './components/pharmacistDashboard/PharmacistDashboard'
 import Login from './components/login/Login'
 import NavBar from './components/Navigation/NavBar';
 import Register from './components/login/Register';
@@ -53,7 +54,7 @@ function App() {
             <Route path='/navbar' element={<NavBar />} />
             <Route path='/login' element={<Login />} />
             <Route path='/physician' element={<PhysicianDashboard />} />
-            <Route path='/pharmacist' element={<PharmacistProfile />} />
+            <Route path='/pharmacist' element={<PharmacistDashboard />} />
           </Route>
         </Routes>
       </ApolloProvider>
