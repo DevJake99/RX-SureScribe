@@ -6,7 +6,7 @@ import { Modal } from "react-bootstrap";
 function PatientDetails({currentPatient, showPrescriptionModal, setShowPrescriptionModal}){
     return(
         <div>
-            <h1>patientDetails</h1>
+            <h1>Patient Details</h1>
             <p>{currentPatient.firstName}</p>
             <Button variant="outline-primary" onClick={()=>setShowPrescriptionModal(true)} >Prescribe a Medication</Button>
             <Modal show={showPrescriptionModal} onHide={()=>setShowPrescriptionModal}>

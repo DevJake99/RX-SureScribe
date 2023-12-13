@@ -46,6 +46,17 @@ function App() {
   const [orders, setOrders] = useState([]);
 
   return (
+    <div style={{
+      backgroundImage: `url(../src/assets/background.jpg)`,
+      backgroundSize: 'cover',
+      // backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      padding: '20px',
+      opacity: 0.7,
+      margin: '0',  // Add this to remove margin
+      overflowX: 'hidden',  // Add this to hide horizontal overflow
+    }}>
     <OrderContext.Provider value={{ orders, setOrders }}>
       <ApolloProvider client={client}>
         <Routes>
@@ -59,7 +70,9 @@ function App() {
           </Route>
         </Routes>
       </ApolloProvider>
+
     </OrderContext.Provider>
+    </div>
   )
 }
 export default App

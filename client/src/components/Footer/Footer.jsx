@@ -9,7 +9,7 @@ const Footer = () => {
             }}>
         <footer className="footer mt-auto py-3">
             <div className="container">
-                <span className="text-muted">RX-SureScript © 2023</span>
+            <span className="text-dark font-weight-bold">RX-SureScript ©2023</span>
             </div>
         </footer>
     </div>
