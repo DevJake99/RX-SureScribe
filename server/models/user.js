@@ -5,7 +5,8 @@ const Patient = require('./Patient')
 const userSchema = new Schema({
     userType: {
         type: String,
-        required: true  // can I provide two options here? like ['Physician' or 'Pharmacy']
+        required: true,
+        enum: ['Physician', 'Pharmacy']
     },
     firstName: {
         type: String,

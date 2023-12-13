@@ -5,6 +5,8 @@ import { CREATE_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import './register.css';
 
+
+
 const Register = () => {
   const [user, setUser] = useState({
     userType: '',
@@ -17,6 +19,13 @@ const Register = () => {
     state: '',
     zip: '',
   });
+
+  /*const [selectedOption, setSelectedOption] = useState('');
+  const userTypeOptions = [
+    { value: user.userType, label: 'Physician' },
+    { value: user.userType, label: 'Pharmacist' },
+    // Add more options as needed
+  ]; */
 
   const [showModal, setShowModal] = useState(false);
 
@@ -114,8 +123,9 @@ const Register = () => {
                   name='userType'
                   value={user.userType}
                   onChange={handleInputChange}>
-                  <option value={'Physician'}>Physician</option>
-                  <option value={'Pharmacy'}>Pharmacy</option>
+                  <option onChange={handleInputChange} name='userType ' >Select User Type</option>
+                  <option onChange={handleInputChange} name='userType ' value={'Physician'}>Physician</option>
+                  <option onChange={handleInputChange} name='userType' value={'Pharmacy'}>Pharmacy</option>
                 </select>
               </Form.Group>
               <br />
