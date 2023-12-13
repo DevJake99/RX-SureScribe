@@ -8,11 +8,21 @@ const Landing = () => {
   const type = data.userType
   console.log(type)
 
+  /* let landingPage;
+   switch(type){
+     case 'Physician':
+       landingPage = window.location.assign('/physician');
+       break;
+     case 'Pharmacy':
+       landingPage = window.location.assign('/pharmacy')
+   } */
+
   return (
     <div>
       <>
         <Container>
           {type === 'Physician' ? (window.location.assign('/physician')) : window.location.assign('/pharmacist')}
+
         </Container>
       </>
     </div>
