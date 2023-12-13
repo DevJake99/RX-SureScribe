@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import PhysicianDashboard from './components/phycisianDashboard/PhysicianDashboard'
-// import PhysicianProfile from './components/physicianProfile/PhysicianProfile'
-// import PharmacistProfile from './components/pharmacistProfile/PharmacistProfile'
 import PharmacistDashboard from './components/pharmacistDashboard/PharmacistDashboard'
 import Login from './components/login/Login'
 import NavBar from './components/Navigation/NavBar';
@@ -17,6 +15,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import OrderContext from './components/phycisianDashboard/OrderContext';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -42,11 +41,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
-
 function App() {
+  const [orders, setOrders] = useState([]);
+
   return (
-    <>
+    <OrderContext.Provider value={{ orders, setOrders }}>
       <ApolloProvider client={client}>
         <Routes>
           <Route path='/register' element={<Register></Register>}></Route>
@@ -58,8 +57,7 @@ function App() {
           </Route>
         </Routes>
       </ApolloProvider>
-
-    </>
+    </OrderContext.Provider>
   )
 }
 export default App
