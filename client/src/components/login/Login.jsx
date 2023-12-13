@@ -30,7 +30,7 @@ const Login = () => {
         variables: { ...user },
       });
 
-      //console.log('Login.jsx, data.login.token:', data.login.token)
+      
       Auth.login(data.login.token);
 
     } catch (error) {

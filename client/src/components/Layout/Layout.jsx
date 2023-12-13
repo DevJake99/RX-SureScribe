@@ -13,26 +13,18 @@ import { QUERY_ME } from '../../utils/queries';
 
 function Layout() {
     // const token = AuthService.getProfile();
-    // console.log(token)
 
     //take the data from the query and then render based on userType
-   /* const { loading, data } = useQuery(QUERY_ME, {
-        // Pass the `thoughtId` URL parameter into query to retrieve this thought's data
-        variables: { ...user },
-    });
-
-    const user = data.user.userType;
-
+    const { loading, data } = useQuery(QUERY_ME)
     if (loading) {
         return <div>Loading...</div>;
-    } */
+    }
+    const user = data?.me?.userType;
+
 
     return <>
-        <NavBar></NavBar>
+        <NavBar user={user}></NavBar>
 
-
-        {/* {(token.userType === 'Physician') && <PhysDash />}
-        {(token.userType === 'Pharmacist') && <PharmDash />} */}
 
 
         <Outlet></Outlet>

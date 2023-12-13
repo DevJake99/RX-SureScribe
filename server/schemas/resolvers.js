@@ -50,7 +50,7 @@ const resolvers = {
       return { token, user };
     },
     login: async (parent, { email, password }, context) => {
-      console.log('Login:', context)
+      //console.log('Login:', context)
       const user = await User.findOne({ email });
 
       if (!user) {
@@ -61,11 +61,11 @@ const resolvers = {
         throw AuthenticationError;
       }
       const token = signToken(user);
-      console.log('token:', token);
+      
       return { token, user };
     },
     addPatient: async (parent, args, context) => {
-      console.log('addPatient:', context.user);
+     
       if (!context.user || !context.user._id) {
         throw new Error('Authentication Error')
       }
