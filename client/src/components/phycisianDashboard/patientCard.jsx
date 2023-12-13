@@ -1,6 +1,5 @@
 import {Card,Button} from 'react-bootstrap';
 import { useEffect, useState } from 'react';
-import prescribeRx from './prescribeRx';
 
 
 const PatientCard = ({  setCurrentPatient, patient, handlePatientClick, showPatientDetails, setShowPatientDetails }) => {
