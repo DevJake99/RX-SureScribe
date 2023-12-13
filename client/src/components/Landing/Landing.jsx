@@ -12,7 +12,7 @@ const Landing = () => {
     <div>
       <>
         <Container>
-          {type === 'Physician' ? (window.location.assign('/physician')) : window.location.assign('/physician')}
+          {type === 'Physician' ? (window.location.assign('/physician')) : window.location.assign('/pharmacist')}
         </Container>
       </>
     </div>
