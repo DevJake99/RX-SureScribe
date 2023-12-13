@@ -28,8 +28,9 @@ class AuthService {
     }
 
     login(idToken) {
+        console.log('idToken', idToken)
         localStorage.setItem('id_token', idToken);
-        window.location.assign('/');
+        window.location.assign('/physician');
     }
 
     logout() {
