@@ -1,14 +1,20 @@
 import Container from 'react-bootstrap/Container';
-import Login from '../login/Login'
+import AuthService from '../../utils/auth'
+import PhysDash from '../phycisianDashboard/PhysicianDashboard';
+import PharmDash from '../pharmacistDashboard/PharmacistDashboard';
 
 const Landing = () => {
+  const { data } = AuthService.getProfile()
+  const type = data.userType
+  console.log(type)
+
   return (
     <div>
-        <>
+      <>
         <Container>
-            <Login />
+          {type === 'Physician' ? (window.location.assign('/physician')) : window.location.assign('/physician')}
         </Container>
-        </>
+      </>
     </div>
   )
 }

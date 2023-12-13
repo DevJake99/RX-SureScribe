@@ -43,7 +43,7 @@ const Register = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log(user);
+    
 
     try {
       const { data } = await createAccount({
