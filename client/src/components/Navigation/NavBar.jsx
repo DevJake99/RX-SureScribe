@@ -26,10 +26,10 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
           <Nav className="me-auto">
-
             {/*!user && (
               <Nav.Link href="/physician">Physician Dashboard</Nav.Link>
             )*/}
+
             {user === 'Physician' && (
               <Nav.Link href="/physician">Physician Dashboard</Nav.Link>
             )}
