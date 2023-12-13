@@ -5,8 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import PhysicianDashboard from './components/phycisianDashboard/PhysicianDashboard'
 import PharmacistDashboard from './components/pharmacistDashboard/PharmacistDashboard'
-import Login from './components/login/Login'
-import NavBar from './components/Navigation/NavBar';
+import Login from './components/login/Login';
 import Register from './components/login/Register';
 import {
   ApolloClient,
