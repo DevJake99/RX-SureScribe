@@ -97,7 +97,7 @@ export default function CreatePatient(props) {
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
-                        </Form>
+
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Last Name:</Form.Label>
                             <Form.Control
@@ -114,7 +114,7 @@ export default function CreatePatient(props) {
                                 type="text"
                                 placeholder="Date of Birth"
                                 name="dob"
-                                value={patientInfo.lastName}
+                                value={patientInfo.dob}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
@@ -184,12 +184,12 @@ export default function CreatePatient(props) {
                                 type="text"
                                 placeholder="Enter Insurance"
                                 name="insurance"
-                                value={patientInfo.zip}
+                                value={patientInfo.insurance}
                                 onChange={handleInputChange}
                             />
                         </Form.Group>
+                        </Form>
                 </Modal.Body>
-
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleModalClose}>Close</Button>
                     <Button variant="primary">Save Changes</Button>
