@@ -2,7 +2,7 @@ import './phycisianDash.css'
 import CreatePatient from './createPatient';
 import { useEffect, useState } from 'react';
 import PatientCard from './patientCard';
-import PatientDetails from './patientDetails';
+import PatientDetails from './PatientDetails.jsx';
 import { useMutation } from '@apollo/client';
 import { ADD_PATIENT } from '../../utils/mutations';
 
@@ -90,20 +90,20 @@ function PhysDash() {
       insurance: "United Health",
 
     },
-    
-  {
-    firstName: "Kelly",
-    lastName: "Smith",
-    email: "KSmith@gmail.com",
-    phone: "999-999-9999",
-    address: "999",
-    city: "Lucky Lane",
-    state: "RI",
-    zip: "02801",
-    dob: "4/27/1999",
-    insurance: "Medica",
-},
-    ]
+
+    {
+      firstName: "Kelly",
+      lastName: "Smith",
+      email: "KSmith@gmail.com",
+      phone: "999-999-9999",
+      address: "999",
+      city: "Lucky Lane",
+      state: "RI",
+      zip: "02801",
+      dob: "4/27/1999",
+      insurance: "Medica",
+    },
+  ]
 
   const handlePatientClick = (patient) => {
     setCurrentPatient(patient);
@@ -119,7 +119,6 @@ return (
       <h1>Welcome, Physician!</h1>
       <CreatePatient variant="outline-primary" onClick={() => setShowModal(true)}>Create New Patient</CreatePatient><br />
       {/* Modals and other components can be rendered here */}
-
 
           <div className="patientCardContainer">
             {dummyData.map((patient, index) => (
