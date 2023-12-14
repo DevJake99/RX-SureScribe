@@ -28,16 +28,31 @@ export const CREATE_USER = gql`
 `;
 
 export const ADD_PATIENT = gql`
-  mutation addPatient($firstName: String!,$lastName: String!, $dob: String!) {
-    addPatient(firstName: $firstName, lastName: $lastName, dob: $dob) {
-      patient{
+  # mutation addPatient($firstName: String!,$lastName: String!, $dob: String!) {
+  #   addPatient(firstName: $firstName, lastName: $lastName, dob: $dob) {
+  #     patient{
+  #     _id
+  #     firstName
+  #     lastName
+  #     dob
+  #     }
+  #   }
+  # }
+  mutation addPatient($firstName: String!, $lastName: String!, $dob: String!) {
+  addPatient(firstName: $firstName, lastName: $lastName, dob: $dob) {
+    _id
+    allergies
+    dob
+    firstName
+    lastName
+    physician {
       _id
-      firstName
-      lastName
-      dob
-      }
+    }
+    prescriptions {
+      _id
     }
   }
+}
 `;
 
 export const ADD_PRESCRIPTION = gql`
