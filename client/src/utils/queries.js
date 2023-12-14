@@ -53,7 +53,7 @@ export const QUERY_ME = gql`
     firstName
     lastName
     state
-    streetAdress
+    streetAddress
     userType
     zip
     patients {

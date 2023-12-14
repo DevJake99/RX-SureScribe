@@ -18,7 +18,7 @@ type User{
     firstName: String!
     lastName: String!
     email: String!
-    streetAdress: String!
+    streetAddress: String!
     city: String!
     state: String!
     zip: String!
@@ -54,7 +54,7 @@ type Mutation {
     lastName: String!,
     email: String!,
     password: String!,
-    streetAdress: String!,
+    streetAddress: String!,
     city: String!,
     state: String!,
     zip: String!
