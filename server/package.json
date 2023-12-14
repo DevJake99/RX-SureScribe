@@ -1,5 +1,5 @@
 {
-    "name": "RX-SureScribe",
+    "name": "RX-SureScribe-server",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
