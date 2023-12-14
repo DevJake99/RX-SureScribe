@@ -4,19 +4,12 @@
   padding: 20px 0;
   text-align: center;
   background-color: #f8f9fa;
-  padding: 40px 0;
   opacity: 0.9;
 }
 
-.key-features {
+.home-container {
+  padding: 20px 0;
   background-color: #f8f9fa;
-  padding: 40px 0;
-  opacity: 0.9;
-}
-
-.challenge-section {
-  background-color: #f8f9fa;
-  padding: 40px 0;
   opacity: 0.9;
 }
 
@@ -51,3 +44,5 @@
     font-style: italic;
     font-weight: bold;
   }
+
+  

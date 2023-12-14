@@ -1,18 +1,19 @@
-.h1-register{
-    position:relative;
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.h1-register {
+    position: relative;
     left: 30%;
 }
 
-.page{
-    position:relative;
+.page {
+    position: relative;
     top: 130px;
     left: 35%;
-
 }
 
 .registerBtn {
     display: inline-block;
-    position:relative;
+    position: relative;
     left: 55px;
     padding: 10px 20px;
     color: #fff;
@@ -26,5 +27,43 @@
 
 .registerBtn:hover {
     background-color: #0056b3;
+}
 
+/* Styles for the registration form */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-body form {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-secondary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.bg-danger {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.bg-success {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
 }
