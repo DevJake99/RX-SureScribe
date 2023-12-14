@@ -61,7 +61,7 @@ const handlePatientClick = (patient) => {
 };
 
 return (
-  <div className="container">
+  <div>
   <div className="flex-container">
     {/* Left Column: Patient Cards */}
     <div className="left-column">

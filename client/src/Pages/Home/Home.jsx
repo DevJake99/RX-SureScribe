@@ -17,7 +17,7 @@ function Home() {
       <div className="header">
           <h1>Rx SureScript</h1>
           <p style={{ fontStyle: 'italic', fontWeight: 'bold', fontSize: '15pt' }}>
-        Bridging the gap between Physicians and Pharmacists. <br />Empower collaboration, enhance patient care.
+        Bridging the gap between Physicians and Pharmacists. <br />Empower collaboration and enhance patient care.
       </p>
 
         </div>
@@ -25,7 +25,6 @@ function Home() {
         <div className="key-features">
           <ul className="container">
           <h3>Key Features:</h3>
-            <li>Real-Time Communication: Facilitate instant communication between Physicians and Pharmacists.</li>
             <li>Centralized Patient Information: Access comprehensive patient profiles, including medical history, current medications, and treatment plans.</li>
             <li>Medication Management: Simplify the prescription process and enhance medication adherence.</li>
             <li>Secure and Compliant: We prioritize the security and privacy of patient information.</li>
