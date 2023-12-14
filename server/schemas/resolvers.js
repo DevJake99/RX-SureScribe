@@ -1,7 +1,6 @@
-const { error } = require('console');
+const { AuthenticationError } = require('apollo-server-express');
 const { User, Patient, Prescription } = require('../models');
-const { signToken, AuthenticationError } = require('../utils/auth');
-//Template 
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -50,9 +49,7 @@ const resolvers = {
       return { token, user };
     },
     login: async (parent, { email, password }, context) => {
-      //console.log('Login:', context)
       const user = await User.findOne({ email });
-
       if (!user) {
         throw AuthenticationError;
       }
@@ -61,15 +58,13 @@ const resolvers = {
         throw AuthenticationError;
       }
       const token = signToken(user);
-      
       return { token, user };
     },
     addPatient: async (parent, args, context) => {
-     
       if (!context.user || !context.user._id) {
         throw new Error('Authentication Error')
       }
-      const physician = await User.findById(context.user._id) // get physicianID from token
+      const physician = await User.findById(context.user._id)
       if (physician && physician.userType === 'Physician') {
         const patient = await Patient.create({
           firstName: args.firstName,
@@ -82,14 +77,15 @@ const resolvers = {
         await User.findByIdAndUpdate(physician._id, { $push: { patients: patient._id } });
         return patient;
       }
-
-
-
-
-
-    }
-  }
-
-}
+    },
+    addPrescription: async (parent, args, context) => {
+      if (context.user) {
+        const prescription = await Prescription.create({ ...args });
+        return prescription;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+  },
+};
 
 module.exports = resolvers;

@@ -27,13 +27,20 @@ export default function PrescribeRx(props) {
         });
     };
 
+    const [addPrescription, { error }] = useMutation(ADD_PRESCRIPTION);
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
-        setOrders((prevOrders) => [...prevOrders, prescriptionInfo]);
+        try {
+            const { data } = await addPrescription({
+                variables: { ...prescriptionInfo },
+            });
 
-        // Call the setPrescription function passed as a prop
-        props.setPrescription(prescriptionInfo);
+            setOrders((prevOrders) => [...prevOrders, data.addPrescription]);
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     const handleModalOpen = () => {

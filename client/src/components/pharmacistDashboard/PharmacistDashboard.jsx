@@ -8,14 +8,6 @@ import OrderContext from '../phycisianDashboard/OrderContext';
 const PharmDash = () => {
     const { orders } = useContext(OrderContext);
 
-    // useEffect(() => {
-    //   // Example: Fetch orders from an API endpoint
-    //   // Replace this with your actual API endpoint
-    //   fetch('https://api.example.com/orders')
-    //     .then((response) => response.json())
-    //     .then((data) => setOrders(data))
-    //     .catch((error) => console.error('Error fetching orders:', error));
-    // }, []);
   
     return (
       <div className="center-container">
