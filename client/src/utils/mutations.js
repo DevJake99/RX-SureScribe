@@ -35,12 +35,11 @@ export const ADD_PATIENT = gql`
       firstName
       lastName
       dob
-      prescriptions
       allergies
-      ##prescription {
-        ##_id
-        ##interactionCode
-      ##}
+      prescription {
+        _id
+        interactionCode
+      }
       }
     }
   }
