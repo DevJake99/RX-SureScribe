@@ -42,6 +42,7 @@ type Auth{
 type Query{
     users: [User]
     currentUser: User
+    prescriptions:  Prescription
     prescriptionByCategory(category: String!): [Prescription]
     pharmacyByCity(city: String!) : [User]
     patientLookUp(firstName: String!, lastName: String!) : [Patient]

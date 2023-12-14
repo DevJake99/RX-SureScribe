@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 import OrderContext from "./OrderContext";
 import { ADD_PRESCRIPTION } from "../../utils/mutations";
+import { useMutation } from "@apollo/client";
 
 export default function PrescribeRx(props) {
     const { setOrders } = useContext(OrderContext);
@@ -37,16 +38,18 @@ export default function PrescribeRx(props) {
             const { data } = await addPrescription({
                 variables: { ...prescriptionInfo },
             });
+            console.log('Data', data)
 
-            setOrders((prevOrders) => [...prevOrders, data.addPrescription]);
-        } catch (err) {
-            console.error(err);
+            // {setOrders((prevOrders) => [...prevOrders, data.addPrescription]);}
+        } catch (error) {
+            console.log(error);
         }
-    };
 
+    };
     const handleModalOpen = () => {
         setShowModal(true);
     }
+
 
     const handleModalClose = () => {
         setShowModal(false);
@@ -133,10 +136,15 @@ export default function PrescribeRx(props) {
                                 />
                             </Form.Group>
                         </Form>
+                        {error && (
+                            <div className='my-3 p-3 bg-danger text-white'>
+                                {error.message}
+                            </div>
+                        )}
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleModalClose}>Close</Button>
-                        <Button variant="primary" type="submit">Save Changes</Button>
+                        <Button variant="primary" type="submit" onClick={handleFormSubmit}>Save Changes</Button>
                     </Modal.Footer>
                 </Modal.Dialog>
             </Modal>
