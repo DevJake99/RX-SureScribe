@@ -14,7 +14,7 @@ const Register = () => {
     lastName: '',
     email: '',
     password: '',
-    streetAdress: '',
+    streetAddress: '',
     city: '',
     state: '',
     zip: '',
@@ -70,7 +70,7 @@ const Register = () => {
       lastName: '',
       email: '',
       password: '',
-      streetAdress: '',
+      streetAddress: '',
       city: '',
       state: '',
       zip: '',
@@ -155,13 +155,13 @@ const Register = () => {
                   onChange={handleInputChange} />
               </Form.Group>
               <br />
-              <Form.Group controlId='formStreetAdress'>
+              <Form.Group controlId='formStreetAddress'>
                 <Form.Label>Street Address</Form.Label>
                 <input
                   required
                   className='form-control'
-                  value={user.streetAdress}
-                  name='streetAdress'
+                  value={user.streetAddress}
+                  name='streetAddress'
                   type='text'
                   placeholder='Street Address'
                   onChange={handleInputChange} />

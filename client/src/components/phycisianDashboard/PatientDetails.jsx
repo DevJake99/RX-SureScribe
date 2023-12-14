@@ -1,17 +1,16 @@
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import PrescribeRx from "./prescribeRx";
 import { useState } from "react";
-import { Modal } from "react-bootstrap";
 
 function PatientDetails({currentPatient, showPrescriptionModal, setShowPrescriptionModal}){
-    return(
-        <div>
+    return (
+        <div className="right-component text-center">
             <h1>Patient Details</h1>
-            <p>{currentPatient.firstName}</p>
-            <Button variant="outline-primary" onClick={()=>setShowPrescriptionModal(true)} >Prescribe a Medication</Button>
-            <Modal show={showPrescriptionModal} onHide={()=>setShowPrescriptionModal}>
-          <PrescribeRx closeModal={()=>showPrescriptionModal} clifford={"The Big Red Dog"} tacos={[1,2,3]}/>
-      </Modal>
+            <p style={{ fontSize: '20px', fontWeight: 'bold'}}>{currentPatient.firstName} {currentPatient.lastName}</p>
+            <PrescribeRx variant="outline-primary" 
+        showPrescriptionModal={showPrescriptionModal}
+        setShowPrescriptionModal={setShowPrescriptionModal}
+      />
         </div>
     )
 }

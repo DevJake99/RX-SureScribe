@@ -1,6 +1,22 @@
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 .create-patient-button {
-    margin-bottom: 16px; /* Adjust the margin as needed */
+    margin-bottom: 16px; 
+  }
+  
+  .flex-container {
+    display: flex;
+  }
+  
+  .left-column {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8); 
+  }
+  
+  .right-column {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(224, 224, 224, 0.8);
   }
   

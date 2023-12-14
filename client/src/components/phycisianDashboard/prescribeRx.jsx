@@ -57,7 +57,7 @@ export default function PrescribeRx(props) {
             <Button onClick={handleModalOpen}>Open Prescription Form</Button>
 
             <Modal show={showModal} onHide={handleModalClose}>
-                <Modal.Dialog>
+                <Modal.Dialog className="m-0">
                     <Modal.Header closeButton>
                         <Modal.Title>Prescription Entry</Modal.Title>
                     </Modal.Header>
@@ -65,7 +65,7 @@ export default function PrescribeRx(props) {
                     <Modal.Body>
                         <Form onSubmit={handleFormSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Medication</Form.Label>
+                                <Form.Label>Medication:</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter Medication"
@@ -75,7 +75,7 @@ export default function PrescribeRx(props) {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Dosage</Form.Label>
+                                <Form.Label>Dosage:</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter Medication Dosing"
@@ -85,7 +85,7 @@ export default function PrescribeRx(props) {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Frequency</Form.Label>
+                                <Form.Label>Frequency:</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter Frequency"
@@ -95,7 +95,7 @@ export default function PrescribeRx(props) {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Duration</Form.Label>
+                                <Form.Label>Duration:</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter Duration"
@@ -105,7 +105,7 @@ export default function PrescribeRx(props) {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Refills</Form.Label>
+                                <Form.Label>Refills:</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter Refills"
@@ -115,7 +115,7 @@ export default function PrescribeRx(props) {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>notes</Form.Label>
+                                <Form.Label>Notes:</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter Notes"
@@ -128,7 +128,7 @@ export default function PrescribeRx(props) {
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleModalClose}>Close</Button>
-                        <Button variant="primary" type="submit">Save changes</Button>
+                        <Button variant="primary" type="submit">Save Changes</Button>
                     </Modal.Footer>
                 </Modal.Dialog>
             </Modal>

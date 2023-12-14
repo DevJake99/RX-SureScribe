@@ -80,7 +80,7 @@ export default function CreatePatient(props) {
             className="modal show"
             style={{ display: 'block', position: 'initial' }}
         >
-            <Modal.Dialog>
+            <Modal.Dialog className="m-0">
                 <Modal.Header closeButton>
                     <Modal.Title>Create a Patient</Modal.Title>
                 </Modal.Header>
@@ -88,7 +88,7 @@ export default function CreatePatient(props) {
                 <Modal.Body>
                     <Form onSubmit={handleFormSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>First Name</Form.Label>
+                            <Form.Label>First Name:</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter First Name"
@@ -99,7 +99,7 @@ export default function CreatePatient(props) {
                         </Form.Group>
                         </Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Last Name</Form.Label>
+                            <Form.Label>Last Name:</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter Last Name"
@@ -109,7 +109,7 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email</Form.Label>
+                            <Form.Label>Email:</Form.Label>
                             <Form.Control
                                 type="email"
                                 placeholder="Enter Email"
@@ -119,7 +119,7 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Phone</Form.Label>
+                            <Form.Label>Phone:</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter Phone Number"
@@ -129,7 +129,7 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Address</Form.Label>
+                            <Form.Label>Address:</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter Address"
@@ -139,7 +139,7 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>City</Form.Label>
+                            <Form.Label>City:</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter City"
@@ -149,7 +149,7 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>State</Form.Label>
+                            <Form.Label>State:</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Enter State"
@@ -159,10 +159,10 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Zipcode</Form.Label>
+                            <Form.Label>Zipcode:</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Enter Zip"
+                                placeholder="Enter Zipcode"
                                 name="zip"
                                 value={patientInfo.zip}
                                 onChange={handleInputChange}
@@ -172,7 +172,7 @@ export default function CreatePatient(props) {
 
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleModalClose}>Close</Button>
-                    <Button variant="primary">Save changes</Button>
+                    <Button variant="primary">Save Changes</Button>
                 </Modal.Footer>
             </Modal.Dialog>
         </div>
