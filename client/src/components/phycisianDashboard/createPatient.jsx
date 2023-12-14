@@ -109,6 +109,16 @@ export default function CreatePatient(props) {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Age:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="Date of Birth"
+                                name="dob"
+                                value={patientInfo.lastName}
+                                onChange={handleInputChange}
+                            />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email:</Form.Label>
                             <Form.Control
                                 type="email"
@@ -164,6 +174,16 @@ export default function CreatePatient(props) {
                                 type="text"
                                 placeholder="Enter Zipcode"
                                 name="zip"
+                                value={patientInfo.zip}
+                                onChange={handleInputChange}
+                            />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Insurance:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="Enter Insurance"
+                                name="insurance"
                                 value={patientInfo.zip}
                                 onChange={handleInputChange}
                             />

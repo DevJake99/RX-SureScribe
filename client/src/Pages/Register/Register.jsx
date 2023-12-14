@@ -104,7 +104,7 @@ const Register = () => {
               <br />
 
               <Form.Group controlId='formFirstName'>
-                <Form.Label>First Name</Form.Label>
+                <Form.Label>First Name:</Form.Label>
                 <input
                   required
                   className='form-control'
@@ -116,7 +116,7 @@ const Register = () => {
               </Form.Group>
               <br />
               <Form.Group controlId='formLastName'>
-                <Form.Label>Last Name</Form.Label>
+                <Form.Label>Last Name:</Form.Label>
                 <input
                   required
                   className='form-control'
@@ -128,7 +128,7 @@ const Register = () => {
               </Form.Group>
               <br />
               <Form.Group controlId='formEmail'>
-                <Form.Label>Email</Form.Label>
+                <Form.Label>Email:</Form.Label>
                 <input
                   required
                   className='form-control'
@@ -140,7 +140,7 @@ const Register = () => {
               </Form.Group>
               <br />
               <Form.Group controlId='formPassword'>
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Password:</Form.Label>
                 <input
                   required
                   className='form-control'
@@ -152,7 +152,7 @@ const Register = () => {
               </Form.Group>
               <br />
               <Form.Group controlId='formStreetAddress'>
-                <Form.Label>Street Address</Form.Label>
+                <Form.Label>Street Address:</Form.Label>
                 <input
                   required
                   className='form-control'
@@ -164,7 +164,7 @@ const Register = () => {
               </Form.Group>
               <br />
               <Form.Group controlId='formCity'>
-                <Form.Label>City</Form.Label>
+                <Form.Label>City:</Form.Label>
                 <input
                   required
                   className='form-control'
@@ -176,7 +176,7 @@ const Register = () => {
               </Form.Group>
               <br />
               <Form.Group controlId='formState'>
-                <Form.Label>State</Form.Label>
+                <Form.Label>State:</Form.Label>
                 <input
                   required
                   className='form-control'
@@ -188,7 +188,7 @@ const Register = () => {
               </Form.Group>
               <br />
               <Form.Group controlId='formZip'>
-                <Form.Label>Zip Code</Form.Label>
+                <Form.Label>Zipcode:</Form.Label>
                 <input
                   required
                   className='form-control'

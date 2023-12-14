@@ -29,7 +29,7 @@ export default function PrescribeRx(props) {
         });
     };
 
-    const [addPrescription, { error }] = useMutation(ADD_PRESCRIPTION);
+    // const [addPrescription, { error }] = useMutation(ADD_PRESCRIPTION);
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();

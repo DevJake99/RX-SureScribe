@@ -29,7 +29,7 @@ export const CREATE_USER = gql`
 // Change to add prescription
 export const ADD_PATIENT = gql`
   mutation addPatient($firstName: String!,$lastName: String!, $dob: String!, $allergies:[String], $physician:ID!, $prescriptions:[String],) {
-    addPatient(firstName: $firstName, lastName: $lastName, dob: $dob, allergies: $allergies, physician: $physician, prescriptions: $prescriptions) {
+    addPatient(firstName: $firstName, lastName: $lastName, dob: $dob, phone: $phone, address: $address, city: $city, state: $state, zip: $zip, insurance: $insurance, allergies: $allergies, physician: $physician, prescriptions: $prescriptions) {
       patient{
       _id
       firstName
