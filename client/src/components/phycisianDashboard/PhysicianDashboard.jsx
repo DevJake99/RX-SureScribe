@@ -4,7 +4,7 @@ import { Button, Modal, Form } from 'react-bootstrap';
 //import CreatePatient from './createPatient';
 import { useEffect, useState } from 'react';
 import PatientCard from './patientCard';
-import PatientDetails from './patientDetails';
+import PatientDetails from './PatientDetails.jsx';
 import { useMutation } from '@apollo/client';
 import { ADD_PATIENT } from '../../utils/mutations';
 
@@ -92,20 +92,20 @@ function PhysDash() {
       insurance: "United Health",
 
     },
-    
-  {
-    firstName: "Kelly",
-    lastName: "Smith",
-    email: "KSmith@gmail.com",
-    phone: "999-999-9999",
-    address: "999",
-    city: "Lucky Lane",
-    state: "RI",
-    zip: "02801",
-    dob: "4/27/1999",
-    insurance: "Medica",
-},
-    ]
+
+    {
+      firstName: "Kelly",
+      lastName: "Smith",
+      email: "KSmith@gmail.com",
+      phone: "999-999-9999",
+      address: "999",
+      city: "Lucky Lane",
+      state: "RI",
+      zip: "02801",
+      dob: "4/27/1999",
+      insurance: "Medica",
+    },
+  ]
 
   const handlePatientClick = (patient) => {
     setCurrentPatient(patient);
@@ -113,13 +113,13 @@ function PhysDash() {
   };
 
 
-return (
-  <div>
-  <div className="flex-container">
-    {/* Left Column: Patient Cards */}
-    <div className="left-column">
-      <h1>Welcome, Physician!</h1>
-      <Button className="create-patient-button" variant="outline-primary" onClick={() => setShowModal(true)}>Create New Patient</Button>
+  return (
+    <div>
+      <div className="flex-container">
+        {/* Left Column: Patient Cards */}
+        <div className="left-column">
+          <h1>Welcome, Physician!</h1>
+          <Button className="create-patient-button" variant="outline-primary" onClick={() => setShowModal(true)}>Create New Patient</Button>
 
 
           <div className="patientCardContainer">
