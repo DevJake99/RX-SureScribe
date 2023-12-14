@@ -45,6 +45,20 @@ export const ADD_PATIENT = gql`
   }
 `;
 
+export const ADD_PRESCRIPTION = gql`
+  mutation addPrescription($medication: String!, $dosage: String!, $frequency: String!, $duration: String!, $refills: String!, $notes: String!) {
+    addPrescription(medication: $medication, dosage: $dosage, frequency: $frequency, duration: $duration, refills: $refills, notes: $notes) {
+      _id
+      medication
+      dosage
+      frequency
+      duration
+      refills
+      notes
+    }
+  }
+`;
+
 // export const ADD_COMMENT = gql`
 //   mutation addComment($thoughtId: ID!, $commentText: String!) {
 //     addComment(thoughtId: $thoughtId, commentText: $commentText) {

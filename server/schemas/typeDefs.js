@@ -1,4 +1,3 @@
-
 const { gql } = require('apollo-server');
 
 const typeDefs = gql`
@@ -26,10 +25,13 @@ type User{
 }
 
 type Prescription{
-    prescriptionID: ID!
-    name: String!
-    interactionCode: String!
-    category: String!
+    _id: ID!
+    medication: String!
+    dosage: String!
+    frequency: String!
+    duration: String!
+    refills: String!
+    notes: String!
 }
 
 type Auth{
@@ -37,14 +39,12 @@ type Auth{
     user: User
 }
 
-
 type Query{
     users: [User]
     currentUser: User
     prescriptionByCategory(category: String!): [Prescription]
     pharmacyByCity(city: String!) : [User]
     patientLookUp(firstName: String!, lastName: String!) : [Patient]
-
 }
 
 type Mutation {
@@ -68,7 +68,15 @@ type Mutation {
         physician:ID!
         prescriptions:[String],
         ) : Patient
-    # addPrescription(prescription:[String]) : Patient
+
+    addPrescription(
+        medication: String!,
+        dosage: String!,
+        frequency: String!,
+        duration: String!,
+        refills: String!,
+        notes: String!
+    ) : Prescription
 
     login(
     email: String!,
@@ -76,5 +84,4 @@ type Mutation {
     ): Auth
 }
 `
-
 module.exports = typeDefs;
