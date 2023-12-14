@@ -24,12 +24,7 @@ const patientSchema = new Schema({
         type: Date,
         required: true,
     },
-    allergies: [
-        String
-        /* {
-             type: Schema.Types.String,
-         } */
-    ],
+    allergies: [String],
     prescriptions: [
         {
             type: Schema.Types.ObjectId,

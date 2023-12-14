@@ -14,7 +14,12 @@ const resolvers = {
       return User.find().populate('patients');
     },
     prescriptions: async () => {
-      return Prescription.find({})
+      try {
+        return await Prescription.find({})
+      } catch (error) {
+        console.log(error)
+        throw new Error('Failed to fetch prescriptions')
+      }
     },
     prescriptionByCategory: async (parent, args, context) => {
       const prescriptionList = await Prescription.find({ category: args.category })
@@ -64,24 +69,34 @@ const resolvers = {
       return { token, user };
     },
     addPatient: async (parent, args, context) => {
-      if (!context.user || !context.user._id) {
-        throw new Error('Authentication Error')
-      }
-      const physician = await User.findById(context.user._id)
-      if (physician && physician.userType === 'Physician') {
+      try {
         const patient = await Patient.create({
           firstName: args.firstName,
           lastName: args.lastName,
           dob: args.dob,
-          allergies: args.allergies,
-          physician: physician._id,
-          prescriptions: args.prescriptions
         });
-        await User.findByIdAndUpdate(physician._id, { $push: { patients: patient._id } });
         return patient;
+      } catch (error) {
+        console.error(error);
+        throw new Error('Failed to create patient');
       }
+      /*
+      //const physician = await User.findById(context.user._id)
+      //if (physician && physician.userType === 'Physician') {
+      const patient = await Patient.create({
+        firstName: args.firstName,
+        lastName: args.lastName,
+        dob: args.dob,
+        //allergies: args.allergies,
+        //physician: physician._id,
+        //prescriptions: args.prescriptions
+      });
+      //await User.findByIdAndUpdate(physician._id, { $push: { patients: patient._id } });
+      return patient;
+      // }
+      */
     },
-    addPrescription: async (parent, args , context) => {
+    addPrescription: async (parent, args, context) => {
       if (context.user) {
         const prescription = await Prescription.create({ ...args });
         return prescription;
