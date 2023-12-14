@@ -65,7 +65,7 @@ const Login = () => {
         </Container>
       </Navbar> */}
       {/* <Container> */}
-      <Row className="justify-content-center align-items-center" style={{ height: '100vh' }}>
+      <Row className="justify-content-center align-items-center" style={{ height: '50vh' }}>
         <Col md={6}>
           <div className='card'>
             <div className='card-body'>

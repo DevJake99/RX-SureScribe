@@ -1,5 +1,25 @@
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+.create-patient-button {
+    margin-bottom: 16px; 
+  }
+  
+  .flex-container {
+    display: flex;
+  }
+  
+  .left-column {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.8); 
+  }
+  
+  .order-container {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(224, 224, 224, 0.8);
+  }
+  
 h1 {
     text-align: center; /* Corrected from text-cemter */
     /* Add other styles as needed */
@@ -18,3 +38,49 @@ h1 {
     background-color: white; /* Set the background color to white */
     /* Add other styles as needed */
 }
+
+
+  .right-column .contact-btn {
+    text-align: right;
+    /* Add any additional styling for the button */
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pharmacist-greeting,
+  .navigation-links,
+  .content-below-line,
+  .order-container {
+    margin-bottom: 20px; /* Optional: Add some spacing between sections */
+  }
+  
+  .navigation-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navigation-links li {
+    margin-bottom: 10px; /* Optional: Adjust spacing between list items */
+  }
+  
+  .order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .order-container li {
+    margin-bottom: 10px; /* Optional: Adjust spacing between list items */
+  }
+  
+  
+  .order-container .contact-btn {
+    margin-top: 10px; /* Optional: Adjust spacing above the button */
+  }
+  
+  

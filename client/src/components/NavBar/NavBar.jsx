@@ -13,7 +13,7 @@ function NavBar() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row ms-auto">
           {/* <li className="mx-1" style={{ listStyleType: 'none' }}>
             <Link to="/dashboard">
               Dashboard
@@ -51,8 +51,8 @@ function NavBar() {
     <>
       <Navbar className="navbar-custom" collapseOnSelect expand="lg">
         <Container fluid className='px-4'>
-          <div><img src="./src/assets/transparentLogo.png" 
-          alt="RX-SureScript"
+          <div><img src="./src/assets/RX-Logo.png" 
+          alt="Rx SureScribe"
           style={{ width: 'auto', height: '100px' }}/></div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
