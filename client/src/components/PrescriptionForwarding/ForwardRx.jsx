@@ -10,6 +10,7 @@ function PrescriptionForwarding() {
          <Form.Label>Location</Form.Label>
          <Form.Control type="text" placeholder="Enter location" />
        </Form.Group>
+       <Button variant="secondary" onClick={handleModalClose}>Close</Button>
        <Button variant="primary" type="submit">
          Forward Prescription
        </Button>

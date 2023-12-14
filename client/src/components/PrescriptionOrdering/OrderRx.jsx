@@ -13,6 +13,7 @@ function MedOrder({ patient }) {
          <Form.Control type="text" placeholder="Enter drug name" />
        </Form.Group>
        {/* Other form fields here */}
+       <Button variant="secondary" onClick={handleModalClose}>Close</Button>
        <Button variant="primary" type="submit">
          Submit
        </Button>
