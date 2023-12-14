@@ -6,8 +6,8 @@ const PatientCard = ({  setCurrentPatient, patient, handlePatientClick, showPati
 
 
    useEffect(() => {
-    console.log(showPatientDetails)
-   })
+    console.log(showPatientDetails);
+}, [showPatientDetails]);
 
     return (
         <Card style={{width:'18rem', background: 'var(--bs-info)', marginBottom: '16px'}} onClick={() => handlePatientClick(patient._id)}>
@@ -19,7 +19,7 @@ const PatientCard = ({  setCurrentPatient, patient, handlePatientClick, showPati
                 <Button variant="outline-light" onClick = {() => {
                     setShowPatientDetails(true)
                     setCurrentPatient(patient)
-                }} className="mt-auto">View Patient</Button>
+                }} className="mt-auto"  disabled={showPatientDetails}>View Patient</Button>
             </Card.Body>
         </Card>
     )

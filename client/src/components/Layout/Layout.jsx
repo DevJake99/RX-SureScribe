@@ -26,7 +26,6 @@ function Layout() {
         <NavBar user={user}></NavBar>
 
 
-
         <Outlet></Outlet>
 
 
