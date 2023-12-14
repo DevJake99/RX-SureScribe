@@ -38,7 +38,7 @@ export const ADD_PATIENT = gql`
       allergies
       prescription {
         _id
-        interactionCode
+        medication
       }
       }
     }
