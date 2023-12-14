@@ -7,9 +7,9 @@ import AuthService from '../../utils/auth'
 
 function NavBar() {
 
-  const { data } = AuthService.getProfile()
-  const type = data.userType
-  console.log(type)
+  // const { data } = AuthService.getProfile()
+  // const type = data.userType
+  // console.log(type)
 
 
 
@@ -22,11 +22,14 @@ function NavBar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
             <Nav className="me-auto">
-              {type === 'Physician' ? (
+              {/* {type === 'Physician' ? (
                 <Nav.Link href="/physician">Physician Dashboard</Nav.Link>
-              ) : <Nav.Link href="/pharmacist">Pharmacist Dashboard</Nav.Link>}
+              ) : <Nav.Link href="/pharmacist">Pharmacist Dashboard</Nav.Link>} */}
             </Nav>
-            <Nav.Link href="/login" onClick={() => { Auth.logout() }}>{Auth.loggedIn() ? 'Logout' : 'Login'}</Nav.Link>
+            {/* if logged in render the logout button */}
+            
+            {/* {Auth.loggedIn()? } */}
+            {/* <Nav.Link href="/login" onClick={() => { Auth.logout() }}>{Auth.loggedIn() ? 'Logout' : 'Login'}</Nav.Link> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

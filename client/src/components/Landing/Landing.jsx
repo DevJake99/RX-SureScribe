@@ -4,24 +4,28 @@ import PhysDash from '../phycisianDashboard/PhysicianDashboard';
 import PharmDash from '../pharmacistDashboard/PharmacistDashboard';
 
 const Landing = () => {
-  const { data } = AuthService.getProfile()
-  const type = data.userType
-  console.log(type)
+  // console.log(AuthService.getProfile())
+  // const { data } = AuthService.getProfile()
+  // const type = data.userType
+  // console.log(type)
 
-  /* let landingPage;
-   switch(type){
-     case 'Physician':
-       landingPage = window.location.assign('/physician');
-       break;
-     case 'Pharmacy':
-       landingPage = window.location.assign('/pharmacy')
-   } */
+  // let landingPage;
+  // switch (type) {
+  //   case 'Physician':
+  //     landingPage = window.location.assign('/physician');
+  //     break;
+  //   case 'Pharmacy':
+  //     landingPage = 
+  //     break;
+  //     Default < Login ></>
+  //  }
 
   return (
     <div>
+      <p>Landing Page</p>
       <>
         <Container>
-          {type === 'Physician' ? (window.location.assign('/physician')) : window.location.assign('/pharmacist')}
+          {/* {type === 'Physician' ? (<PhysDash />) : <PharmDash></PharmDash>} */}
 
         </Container>
       </>
