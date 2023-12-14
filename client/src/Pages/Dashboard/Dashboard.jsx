@@ -1,14 +1,14 @@
 import PharmDash from "../../components/pharmacistDashboard/PharmacistDashboard";
 import PhysDash from "../../components/phycisianDashboard/PhysicianDashboard";
 import Auth from '../../utils/auth'
-import Login from "../Login/Login";
+
 
 
 
 function Dashboard() {
     const profileData = Auth.getProfile();
     console.log(profileData);
-    const userType = profileData.userType;
+    const userType = profileData.data.userType;
     function renderDash() {
         if (userType === 'Physician') {
 
