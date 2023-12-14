@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 import OrderContext from "./OrderContext";
+import { ADD_PRESCRIPTION } from "../../utils/mutations";
 
 export default function PrescribeRx(props) {
     const { setOrders } = useContext(OrderContext);
