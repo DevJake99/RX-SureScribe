@@ -3,7 +3,7 @@ import { Modal, Form } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-import './register.css';
+import './Register.css';
 
 
 
