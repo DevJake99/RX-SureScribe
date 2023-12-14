@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Patient, Prescription } = require('../models');
+const { User, Patient, Prescription, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -12,6 +12,9 @@ const resolvers = {
     },
     users: async () => {
       return User.find().populate('patients');
+    },
+    prescriptions: async () => {
+      return Prescription.find({})
     },
     prescriptionByCategory: async (parent, args, context) => {
       const prescriptionList = await Prescription.find({ category: args.category })
@@ -78,7 +81,7 @@ const resolvers = {
         return patient;
       }
     },
-    addPrescription: async (parent, args, context) => {
+    addPrescription: async (parent, args , context) => {
       if (context.user) {
         const prescription = await Prescription.create({ ...args });
         return prescription;

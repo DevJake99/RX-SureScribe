@@ -20,43 +20,7 @@ const Register = () => {
     zip: '',
   });
 
-  /*const [selectedOption, setSelectedOption] = useState('');
-  const userTypeOptions = [
-    { value: user.userType, label: 'Physician' },
-    { value: user.userType, label: 'Pharmacist' },
-    // Add more options as needed
-  ]; */
-
   const [showModal, setShowModal] = useState(false);
-
-  const [createAccount, { error, data }] = useMutation(CREATE_USER);
-
-
-  const handleInputChange = (e) => {
-    // each name='' propert for form input must match property in User document
-    const { name, value } = e.target;
-    setUser({
-      ...user,
-      [name]: value
-    });
-  };
-
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    
-
-    try {
-      const { data } = await createAccount({
-        variables: { ...user },
-      });
-
-      Auth.login(data.createAccount.token);
-    } catch (e) {
-      console.error(e);
-    }
-
-  };
-
 
   const handleModalOpen = () => {
     setShowModal(true);
@@ -77,17 +41,50 @@ const Register = () => {
     });
   };
 
+  const [createAccount, { error, data }] = useMutation(CREATE_USER);
+
+
+  const handleInputChange = (e) => {
+    // each name='' propert for form input must match property in User document
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value
+    });
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+
+    try {
+      const { data } = await createAccount({
+        variables: { ...user },
+      });
+
+      Auth.login(data.createAccount.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+  };
+
+
+
+
+
+
 
   return (
     <>
       <a className="signup-btn" onClick={handleModalOpen}>Sign Up Now
-    </a>
-    <Modal show={showModal} onHide={handleModalClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>Sign Up</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        {data ? (
+      </a>
+      <Modal show={showModal} onHide={handleModalClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Sign Up</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {data ? (
             <p>Congratulations! You have created an account!</p>
           ) : (
             <Form onSubmit={handleFormSubmit}>

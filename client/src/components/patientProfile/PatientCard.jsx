@@ -1,5 +1,4 @@
 import './patientCard.css'
-import React from 'react';
 import { Card } from 'react-bootstrap';
 
 function PatientCard({ patient }) {
