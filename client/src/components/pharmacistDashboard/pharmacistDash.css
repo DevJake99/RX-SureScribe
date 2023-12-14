@@ -44,3 +44,43 @@ h1 {
     text-align: right;
     /* Add any additional styling for the button */
   }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pharmacist-greeting,
+  .navigation-links,
+  .content-below-line,
+  .order-container {
+    margin-bottom: 20px; /* Optional: Add some spacing between sections */
+  }
+  
+  .navigation-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navigation-links li {
+    margin-bottom: 10px; /* Optional: Adjust spacing between list items */
+  }
+  
+  .order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .order-container li {
+    margin-bottom: 10px; /* Optional: Adjust spacing between list items */
+  }
+  
+  
+  .order-container .contact-btn {
+    margin-top: 10px; /* Optional: Adjust spacing above the button */
+  }
+  
+  

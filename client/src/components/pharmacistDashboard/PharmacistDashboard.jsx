@@ -12,8 +12,13 @@ const PharmDash = () => {
     return (
       <div>
       <div className="flex-container">
-        <h1>Hello {name}</h1>
-        <div>
+      {/* Pharmacist Greeting */}
+      <div className="pharmacist-greeting">
+        <h1>Hello, Pharmacist {name}</h1>
+      </div>
+      
+      {/* Navigation Links */}
+      <div className="navigation-links">
         <nav>
           <ul>
             <li>
@@ -25,7 +30,7 @@ const PharmDash = () => {
             {/* Add more navigation links as needed */}
           </ul>
         </nav>
-  </div>
+      </div>
         <hr />
         <Routes>
         <Route path="/patients" element={PatientCard} />
@@ -40,6 +45,7 @@ const PharmDash = () => {
             {orders.map((order, index) => (
               <li key={index}>{order.medication}</li>
             ))}
+            <li>Prescription orders will show up here.</li>
           </ul>
         <br/>
         <br/>
