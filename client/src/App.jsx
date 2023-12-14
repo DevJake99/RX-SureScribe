@@ -2,11 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout/Layout'
-import PhysicianDashboard from './components/phycisianDashboard/PhysicianDashboard'
-import PharmacistDashboard from './components/pharmacistDashboard/PharmacistDashboard'
-import Login from './components/login/Login';
-import Register from './components/login/Register';
+import NavBar from './components/NavBar/NavBar';
+import Home from './Pages/Home/Home'
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
+import Dashboard from './Pages/Dashboard/Dashboard'
 import {
   ApolloClient,
   InMemoryCache,
@@ -15,7 +15,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Landing from './components/Landing/Landing'
+import Landing from './Pages/Landing/Landing'
 import OrderContext from './components/phycisianDashboard/OrderContext';
 
 // Construct our main GraphQL API endpoint
@@ -57,20 +57,23 @@ function App() {
       margin: '0',  // Add this to remove margin
       overflowX: 'hidden',  // Add this to hide horizontal overflow
     }}>
-    <OrderContext.Provider value={{ orders, setOrders }}>
-      <ApolloProvider client={client}>
-        <Routes>
-          <Route path='/login' element={<Login />} />
-          <Route path="/" element={<Layout></Layout>}>
-            <Route index element={<Landing></Landing>}></Route>
-            <Route path='/register' element={<Register></Register>}></Route>
-            <Route path='/physician' element={<PhysicianDashboard />} />
-            <Route path='/pharmacist' element={<PharmacistDashboard />} />
-          </Route>
-        </Routes>
-      </ApolloProvider>
+      <OrderContext.Provider value={{ orders, setOrders }}>
+        <ApolloProvider client={client}>
+          <NavBar />
+          <Routes>
+            <Route path='/login' element={<Login />} />
+            <Route index element={<Home />} />
+            {/* <Route index element={<Landing />}></Route> */}
+            <Route path='/register' element={<Register />} />
+            <Route path='/dashboard' element={<Dashboard />} />
 
-    </OrderContext.Provider>
+          </Routes>
+
+        </ApolloProvider>
+
+      </OrderContext.Provider>
+
+
     </div>
   )
 }
