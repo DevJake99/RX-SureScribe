@@ -45,21 +45,23 @@ export const QUERY_SINGLE_THOUGHT = gql`
 `;
 */
 export const QUERY_ME = gql`
-  query me {
-    user {
+   {
+  currentUser {
+    _id
+    city
+    email
+    firstName
+    lastName
+    state
+    streetAdress
+    userType
+    zip
+    patients {
       _id
-      userType
+      dob
       firstName
       lastName
-      email
-      patients {
-        _id
-        firstName
-        lastName
-        allergies
-        prescriptions
-       
-      }
     }
   }
+}
 `;
