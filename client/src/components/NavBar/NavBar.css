@@ -5,3 +5,6 @@
     background-color: var(--bs-info); /* Change this to the color you want */
   }
   
+  .align-right {
+    margin-left: auto;
+  }

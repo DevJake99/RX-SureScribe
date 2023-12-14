@@ -1,0 +1,45 @@
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.header {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  opacity: 0.9;
+}
+
+.key-features {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    opacity: 0.9;
+}
+
+.challenge-section {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  opacity: 0.9;
+}
+
+.signup-section {
+  background-color: var(--bs-info); 
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.signup-btn {
+  background-color: #fff;
+  color: var(--bs-info); 
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+
+.boldItalicText {
+    font-style: italic;
+    font-weight: bold;
+  }

@@ -14,8 +14,8 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
-import Landing from './Pages/Landing/Landing'
+import Footer from './components/Footer/Footer';
+// import Landing from './Pages/Landing/Landing'
 import OrderContext from './components/phycisianDashboard/OrderContext';
 
 // Construct our main GraphQL API endpoint
@@ -68,7 +68,7 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />} />
 
           </Routes>
-
+      <Footer />
         </ApolloProvider>
 
       </OrderContext.Provider>

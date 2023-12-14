@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { Button, Form, Row, Col } from 'react-bootstrap';
 import Register from '../Register/Register';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-import { Navbar } from 'react-bootstrap';
-import Footer from '../../components/Footer/Footer';
+// import { Navbar } from 'react-bootstrap';
+// import Footer from '../../components/Footer/Footer';
 const Login = () => {
   const [user, setUser] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -65,11 +65,10 @@ const Login = () => {
         </Container>
       </Navbar> */}
       {/* <Container> */}
-      <Row>
-        <Col md={6} style={{ marginTop: '300px' }}>
+      <Row className="justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <Col md={6}>
           <div className='card'>
             <div className='card-body'>
-              <p>I'm here</p>
               {data ? (
                 <p>
                   Noice you logged in successfully
@@ -113,7 +112,7 @@ const Login = () => {
 
         </Col>
       </Row>
-      <Footer />
+      {/* <Footer /> */}
       {/* </Container> */}
 
     </>

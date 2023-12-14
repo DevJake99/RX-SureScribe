@@ -14,27 +14,28 @@ function NavBar() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          {/* <li className="mx-1" style={{ listStyleType: 'none' }}>
             <Link to="/dashboard">
               Dashboard
             </Link>
-          </li>
-          <li className="mx-1">
-            <Link href="/register" onClick={() => Auth.logout()}>
+          </li> */}
+          <li className="mx-1" style={{ listStyleType: 'none' }}>
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a href="/" onClick={() => Auth.logout()}>
               Logout
-            </Link>
+            </a>
           </li>
         </ul>
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
+        <ul className="me-auto">
+          {/* <li className="mx-1">
             <Link to="/register">
               Register
             </Link>
-          </li>
-          <li className="mx-1">
+          </li> */}
+          <li className="mx-1" style={{ listStyleType: 'none' }}>
             <Link to="/login">
               Login
             </Link>
@@ -50,10 +51,12 @@ function NavBar() {
     <>
       <Navbar className="navbar-custom" collapseOnSelect expand="lg">
         <Container fluid className='px-4'>
-          <Navbar.Brand >RX-SureScribe</Navbar.Brand>
+          <div><img src="./src/assets/transparentLogo.png" 
+          alt="RX-SureScript"
+          style={{ width: 'auto', height: '100px' }}/></div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-            <Nav className="me-auto">
+            <Nav>
               {showNavigation()}
               {/* {type === 'Physician' ? (
                 <Nav.Link href="/physician">Physician Dashboard</Nav.Link>
@@ -70,3 +73,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
