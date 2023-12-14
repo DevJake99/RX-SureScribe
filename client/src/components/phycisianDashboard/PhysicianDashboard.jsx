@@ -1,7 +1,5 @@
 import './phycisianDash.css'
-import { Button, Modal, Form } from 'react-bootstrap';
-// import { Card } from 'react-bootstrap';
-//import CreatePatient from './createPatient';
+import CreatePatient from './createPatient';
 import { useEffect, useState } from 'react';
 import PatientCard from './patientCard';
 import PatientDetails from './patientDetails';
@@ -114,12 +112,13 @@ function PhysDash() {
 
 
 return (
-  <div>
-  <div className="flex-container">
+  <div className="phys-container">
+  <div className="phys-flex-container">
     {/* Left Column: Patient Cards */}
     <div className="left-column">
       <h1>Welcome, Physician!</h1>
-      <Button className="create-patient-button" variant="outline-primary" onClick={() => setShowModal(true)}>Create New Patient</Button>
+      <CreatePatient variant="outline-primary" onClick={() => setShowModal(true)}>Create New Patient</CreatePatient><br />
+      {/* Modals and other components can be rendered here */}
 
 
           <div className="patientCardContainer">
@@ -142,63 +141,6 @@ return (
           )}
         </div>
       </div>
-
-      {/* Modals and other components can be rendered here */}
-      <Modal show={showModal} onClick={handleModalOpen} onHide={handleModalClose} className="m-0">
-        <Modal.Header closeButton>
-          <Modal.Title>Create a Patient</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          {data ? (
-            <p>Patient added!</p>
-          ) : (
-            <Form >
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>First Name:</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter First Name"
-                  name="firstName"
-                  value={patientInfo.firstName}
-                  onChange={handleInputChange}
-                />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Last Name:</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter Last Name"
-                  name="lastName"
-                  value={patientInfo.lastName}
-                  onChange={handleInputChange}
-                />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>DOB:</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter Date of Birth"
-                  name="dob"
-                  value={patientInfo.dob}
-                  onChange={handleInputChange}
-                />
-              </Form.Group>
-            </Form>
-          )}
-          {error && (
-            <div className="my-3 p-3 bg-danger text-white">
-              {error.message}
-            </div>
-          )}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleModalClose}>Close</Button>
-          <Button type="submit " variant="primary" onClick={handleFormSubmit}>Save Changes</Button>
-        </Modal.Footer>
-      </Modal>
     </div>
   );
 }

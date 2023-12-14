@@ -56,16 +56,14 @@ export default function CreatePatient() {
 
 
     return (
-        <div
-            className="modal show"
-            style={{ display: 'block', position: 'initial' }}
-        >
-            <a className="signup-btn" onClick={handleModalOpen}> Add a Patient
-            </a>
-            <Modal show={showModal} onClick={handleModalOpen} onHide={handleModalClose} className="m-0">
-                <Modal.Header closeButton>
+        <div>
+            <Button onClick={handleModalOpen}>Add a Patient</Button>
+            <Modal show={showModal} onHide={handleModalClose}>
+                <Modal.Dialog className="m-0">
+                    <Modal.Header closeButton>
                     <Modal.Title>Create a Patient</Modal.Title>
                 </Modal.Header>
+
 
                 <Modal.Body>
                     {data ? (
@@ -116,6 +114,7 @@ export default function CreatePatient() {
                     <Button variant="secondary" onClick={handleModalClose}>Close</Button>
                     <Button type="submit " variant="primary" onClick={handleFormSubmit}>Save Changes</Button>
                 </Modal.Footer>
+                </Modal.Dialog>
             </Modal>
         </div>
     );
