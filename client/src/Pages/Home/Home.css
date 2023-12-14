@@ -37,6 +37,15 @@
   text-decoration: none;
 }
 
+.contact-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  opacity: 0.9;
+}
 
 .boldItalicText {
     font-style: italic;

@@ -14,7 +14,12 @@ const resolvers = {
       return User.find().populate('patients');
     },
     prescriptions: async () => {
-      return Prescription.find({})
+      try {
+        return await Prescription.find({})
+      } catch (error) {
+        console.log(error)
+        throw new Error('Failed to fetch prescriptions')
+      }
     },
     prescriptionByCategory: async (parent, args, context) => {
       const prescriptionList = await Prescription.find({ category: args.category })
