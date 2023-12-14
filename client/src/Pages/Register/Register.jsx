@@ -80,8 +80,7 @@ const Register = () => {
 
   return (
     <>
-      <a onClick={handleModalOpen}><br />
-      Click Here to Register
+      <a className="signup-btn" onClick={handleModalOpen}>Sign Up Now
     </a>
     <Modal show={showModal} onHide={handleModalClose}>
       <Modal.Header closeButton>

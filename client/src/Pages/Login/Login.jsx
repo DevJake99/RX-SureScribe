@@ -105,8 +105,8 @@ const Login = () => {
                   {error.message}
                 </div>
               )}
-              < Register />
-
+              <br />
+                  < Register />
             </div>
           </div>
 

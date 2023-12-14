@@ -9,9 +9,9 @@
 }
 
 .key-features {
-    background-color: #f8f9fa;
-    padding: 40px 0;
-    opacity: 0.9;
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  opacity: 0.9;
 }
 
 .challenge-section {
@@ -31,8 +31,8 @@
 .signup-btn {
   background-color: #fff;
   color: var(--bs-info); 
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 10px 15px;
+  font-size: 16px;
   border-radius: 5px;
   text-decoration: none;
   opacity: 0.9;
