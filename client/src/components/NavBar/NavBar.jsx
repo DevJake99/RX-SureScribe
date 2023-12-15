@@ -51,7 +51,7 @@ function NavBar() {
     <>
       <Navbar className="navbar-custom" collapseOnSelect expand="lg">
         <Container fluid className='px-4'>
-          <div><img src="./src/assets/RX-Logo.png" 
+          <div><img src="https://i.ibb.co/M6mb1Jr/RX-Logo.png" 
           alt="Rx SureScribe"
           style={{ width: 'auto', height: '100px' }}/></div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

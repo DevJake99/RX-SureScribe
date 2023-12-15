@@ -20,7 +20,6 @@ function Home() {
         Bridging the gap between Physicians and Pharmacists. <br />Empower collaboration and enhance patient care.
       </p>
         </div>
-<hr />
         <div className="home-container">
           <ul className="container">
           <h3>Key Features:</h3>
