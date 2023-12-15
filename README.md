@@ -2,7 +2,8 @@
 
 Rx SureScribe is a web application that aims to bridge the communication between physicians and pharmacists for all their pharmaceutical needs.
 
-![Rx SureScribe](./client/src/assets/Rx-SureScribe-Login.png)
+![Rx SureScribe - Home](./client/src/assets/Rx-SureScribe-Home.png)
+![Rx SureScribe - Login](./client/src/assets/Rx-SureScribe-Login.png)
 
 ## Technologies Used
 
@@ -58,7 +59,7 @@ Contributions are welcome. Please open an issue or submit a pull request.
 ## Resources
 
 - Google.com
-- Youtube.com
+- YouTube.com
 - Freepik.com (background image)
 - Canva.com (icon and logo creation)
 - Course materials
@@ -67,3 +68,8 @@ Contributions are welcome. Please open an issue or submit a pull request.
 ## License
 
 This project is licensed under the terms of the MIT license.
+
+## Links
+
+- Github Link: https://github.com/DevJake99/RX-SureScribe
+- Deployment Link: https://rx-surescribe-9b9c8ee84e73.herokuapp.com/
