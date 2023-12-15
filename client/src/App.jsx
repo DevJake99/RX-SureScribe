@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div style={{
-      backgroundImage: `url(../src/assets/background.jpg)`,
+      backgroundImage: `url(https://i.ibb.co/nQ8CBQp/background.jpg)`,
       backgroundSize: 'cover',
       // backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
