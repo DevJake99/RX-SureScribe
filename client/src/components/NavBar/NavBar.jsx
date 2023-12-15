@@ -29,7 +29,7 @@ function NavBar() {
       );
     } else {
       return (
-        <ul className="me-auto">
+        <ul className="flex-row ms-auto">
           {/* <li className="mx-1">
             <Link to="/register">
               Register

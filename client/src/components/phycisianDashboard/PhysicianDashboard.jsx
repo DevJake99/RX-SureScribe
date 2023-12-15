@@ -69,46 +69,46 @@ function PhysDash({ patients }) {
 
   // const [name, license, deaNumber] = useState({}) 
 
-  let dummyData = [
-    {
-      firstName: "John",
-      lastName: "Doe",
-      email: "JohnD@gmail.com",
-      phone: "123-456-7891",
-      address: "123 Hwy 45",
-      city: "San Diego",
-      state: "CA",
-      zip: "92101",
-      dob: "12/10/2000",
-      insurance: "Kaiser",
-    },
-    {
-      firstName: "Jane",
-      lastName: "Doe",
-      email: "JaneD@gmail.com",
-      phone: "123-789-4560",
-      address: "456 Yahoo Lane",
-      city: "Vintage",
-      state: "MN",
-      zip: "55401",
-      dob: "1/15/1920",
-      insurance: "United Health",
+  // let dummyData = [
+  //   {
+  //     firstName: "John",
+  //     lastName: "Doe",
+  //     email: "JohnD@gmail.com",
+  //     phone: "123-456-7891",
+  //     address: "123 Hwy 45",
+  //     city: "San Diego",
+  //     state: "CA",
+  //     zip: "92101",
+  //     dob: "12/10/2000",
+  //     insurance: "Kaiser",
+  //   },
+  //   {
+  //     firstName: "Jane",
+  //     lastName: "Doe",
+  //     email: "JaneD@gmail.com",
+  //     phone: "123-789-4560",
+  //     address: "456 Yahoo Lane",
+  //     city: "Vintage",
+  //     state: "MN",
+  //     zip: "55401",
+  //     dob: "1/15/1920",
+  //     insurance: "United Health",
 
-    },
+  //   },
 
-    {
-      firstName: "Kelly",
-      lastName: "Smith",
-      email: "KSmith@gmail.com",
-      phone: "999-999-9999",
-      address: "999",
-      city: "Lucky Lane",
-      state: "RI",
-      zip: "02801",
-      dob: "4/27/1999",
-      insurance: "Medica",
-    },
-  ]
+  //   {
+  //     firstName: "Kelly",
+  //     lastName: "Smith",
+  //     email: "KSmith@gmail.com",
+  //     phone: "999-999-9999",
+  //     address: "999",
+  //     city: "Lucky Lane",
+  //     state: "RI",
+  //     zip: "02801",
+  //     dob: "4/27/1999",
+  //     insurance: "Medica",
+  //   },
+  // ]
 
   const handlePatientClick = (patient) => {
     setCurrentPatient(patient);
