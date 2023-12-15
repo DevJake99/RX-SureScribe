@@ -14,7 +14,7 @@ const PatientCard = ({  setCurrentPatient, patient, handlePatientClick, showPati
             <Card.Body className="d-flex flex-column align-items-center">
                 <Card.Title>{patient.firstName} {patient.lastName}</Card.Title>
                 <Card.Text>
-                    {patient.email}
+                    {patient.dob}
                 </Card.Text>
                 <Button variant="outline-light" onClick = {() => {
                     setShowPatientDetails(true)
