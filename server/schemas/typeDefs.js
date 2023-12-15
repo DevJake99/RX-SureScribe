@@ -46,6 +46,7 @@ type Query{
     prescriptionByCategory(category: String!): [Prescription]
     pharmacyByCity(city: String!) : [User]
     patientLookUp(firstName: String!, lastName: String!) : [Patient]
+    patients:[Patient]
 }
 
 type Mutation {

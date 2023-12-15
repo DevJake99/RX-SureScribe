@@ -6,15 +6,20 @@ import { useEffect, useState } from 'react';
 import PatientCard from './patientCard';
 import PatientDetails from './PatientDetails.jsx';
 import { useMutation } from '@apollo/client';
+import { useQuery } from '@apollo/client';
+import { QUERY_PATIENTS } from '../../utils/queries.js';
 import { ADD_PATIENT } from '../../utils/mutations';
 
-function PhysDash() {
+function PhysDash({ patients }) {
   const [patientInfo, setPatientInfo] = useState({
     firstName: "",
     lastName: "",
     dob: "",
   });
-  const [addPatient, { error, data }] = useMutation(ADD_PATIENT);
+
+  const [addPatient, { error, data }] = useMutation(ADD_PATIENT, {
+    refetchQueries: [QUERY_PATIENTS, 'getPatients']
+  });
 
 
   const [showModal, setShowModal] = useState(false);
@@ -123,7 +128,7 @@ function PhysDash() {
 
 
           <div className="patientCardContainer">
-            {dummyData.map((patient, index) => (
+            {patients.map((patient, index) => (
               <PatientCard currentPatient={currentPatient} setCurrentPatient={setCurrentPatient} showPatientDetails={showPatientDetails} setShowPatientDetails={setShowPatientDetails} patient={patient} key={index} handlePatientClick={() => handlePatientClick(patient)} />
             ))}
 

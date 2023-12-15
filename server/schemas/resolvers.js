@@ -13,6 +13,9 @@ const resolvers = {
     users: async () => {
       return User.find().populate('patients');
     },
+    patients: async () => {
+      return Patient.find();
+    },
     prescriptions: async () => {
       try {
         return await Prescription.find({})

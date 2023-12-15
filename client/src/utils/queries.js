@@ -2,21 +2,21 @@ import { gql } from '@apollo/client';
 
 
 export const QUERY_PATIENTS = gql`
-  query patientLookUp($firstName: String!, $lastName: String!) {
-    patientLookUp(firstName: $firstName, lastName: $lastName) {
+ query getPatients {
+  patients {
+    _id
+    allergies
+    dob
+    firstName
+    lastName
+    physician {
       _id
-     firstName
-     lastName
-     dob
-     allergies
-     prescriptions {
-        name
-        prescriptionID
-        interactionCode
-        category
-      }
+    }
+    prescriptions {
+      _id
     }
   }
+}
 `;
 
 
